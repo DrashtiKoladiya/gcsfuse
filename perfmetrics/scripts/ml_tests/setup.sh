@@ -21,14 +21,17 @@ function install {
   fi
 }
 
-echo "Installing ops-agent..."
-curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
-if sudo bash add-google-cloud-ops-agent-repo.sh --also-install; then
-  echo "Sucessfully installed ops-agent"
-else 
-  echo "Failed to install ops-agent"
-  exit 1
-fi
+du -h
+python3 --version
+
+# echo "Installing ops-agent..."
+# curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
+# if sudo bash add-google-cloud-ops-agent-repo.sh --also-install; then
+#   echo "Sucessfully installed ops-agent"
+# else 
+#   echo "Failed to install ops-agent"
+#   exit 1
+# fi
 
 # # Install Golang.
 # if [ "$(which go)" = "" ] ;then
