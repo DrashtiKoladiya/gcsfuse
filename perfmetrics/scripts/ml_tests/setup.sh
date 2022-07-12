@@ -30,44 +30,44 @@ else
   exit 1
 fi
 
-# Install Golang.
-if [ "$(which go)" = "" ] ;then
-  echo "Installing Golang..."
-  sudo apt update && sudo apt upgrade -y
-  if sudo apt install wget software-properties-common apt-transport-https -y; then
-    wget https://golang.org/dl/$GO_VERSION
-    sudo tar -zxvf $GO_VERSION
-    if [ "$(which go)" = "" ]; then
-      echo 'export GOROOT=$HOME/go' >> ~/.bashrc
-      echo 'export GOPATH=$HOME/go' >> ~/.bashrc
-      echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc 
-      source ~/.bashrc 
-      echo "Sucessfully installed Golang"
-    else
-      echo "Failed to install Golang. Please try again"
-      exit 1
-    fi
-  else
-    echo "Failed to install wget. Please try again"
-    exit 1
-  fi
-fi
+# # Install Golang.
+# if [ "$(which go)" = "" ] ;then
+#   echo "Installing Golang..."
+#   sudo apt update && sudo apt upgrade -y
+#   if sudo apt install wget software-properties-common apt-transport-https -y; then
+#     wget https://golang.org/dl/$GO_VERSION
+#     sudo tar -zxvf $GO_VERSION
+#     if [ "$(which go)" = "" ]; then
+#       echo 'export GOROOT=$HOME/go' >> ~/.bashrc
+#       echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+#       echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc 
+#       source ~/.bashrc 
+#       echo "Sucessfully installed Golang"
+#     else
+#       echo "Failed to install Golang. Please try again"
+#       exit 1
+#     fi
+#   else
+#     echo "Failed to install wget. Please try again"
+#     exit 1
+#   fi
+# fi
 
-# Install fuse.
-install fuse -y
+# # Install fuse.
+# install fuse -y
 
-#Install git.
-install git -y
+# #Install git.
+# install git -y
 
-#Install python3.9.
-install python3.9 -y
+# #Install python3.9.
+# install python3.9 -y
 
-echo "Install/Upgrade Prerequistes for automation script.."
-sudo apt-get update
-if sudo apt install python3-pip python-dev -y && \ 
-   sudo -H pip3 install --upgrade pip && pip3 install absl-py; then
-  echo "You are now ready to run automation script"
-else
-  echo "Failed to install required Prerequistes for automation script. Please try again"
-  exit 1
-fi
+# echo "Install/Upgrade Prerequistes for automation script.."
+# sudo apt-get update
+# if sudo apt install python3-pip python-dev -y && \ 
+#    sudo -H pip3 install --upgrade pip && pip3 install absl-py; then
+#   echo "You are now ready to run automation script"
+# else
+#   echo "Failed to install required Prerequistes for automation script. Please try again"
+#   exit 1
+# fi
