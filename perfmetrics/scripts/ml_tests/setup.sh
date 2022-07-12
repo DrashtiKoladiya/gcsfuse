@@ -21,7 +21,7 @@ function install {
   fi
 }
 
-du -h
+du -H
 python3 --version
 
 # echo "Installing ops-agent..."
@@ -37,7 +37,7 @@ python3 --version
 # if [ "$(which go)" = "" ] ;then
 #   echo "Installing Golang..."
 #   sudo apt update && sudo apt upgrade -y
-#   if sudo apt install wget software-properties-common apt-transport-https -y; then
+#   if sudo apt install wget -y; then
 #     wget https://golang.org/dl/$GO_VERSION
 #     sudo tar -zxvf $GO_VERSION
 #     if [ "$(which go)" = "" ]; then
