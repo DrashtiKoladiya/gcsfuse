@@ -21,7 +21,7 @@ function install {
   fi
 }
 
-du -H
+df
 python3 --version
 
 # echo "Installing ops-agent..."
